@@ -14,8 +14,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var PORT = process.env.PORT || 3000;
 
-var INDEX = _path.default.join(__dirname, '../dist/index.html'); // define routes and socket
-
+var INDEX = _path.default.join(__dirname, '../dist/index.html');
 
 var server = (0, _express.default)();
 server.get('/', function (req, res) {
