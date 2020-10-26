@@ -5,7 +5,7 @@
     "node": ">=11.0.0"
   },
   "description": "An HTML5 multiplayer brawler game based on Lance",
-  "main": "src/main.js",
+  "main": "src/electron.js",
   "dependencies": {
     "@babel/node": "^7.2.2",
     "babel-loader": "^8.0.5",
@@ -22,7 +22,8 @@
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "eslint": "^3.16.1",
-    "eslint-config-google": "^0.7.1"
+    "eslint-config-google": "^0.7.1",
+    "electron": "^10.1.5"
   },
   "scripts": {
     "start": "node dist-server/main.js",
@@ -31,7 +32,8 @@
     "postinstall": "webpack && babel src --source-maps --out-dir dist-server",
     "build": "webpack && babel src --source-maps --out-dir dist-server",
     "stats": "webpack --env production --profile --json > stats.json",
-    "dev": "webpack --watch"
+    "dev": "webpack --watch",
+    "electron": "electron ."
   },
   "repository": {
     "type": "git",
